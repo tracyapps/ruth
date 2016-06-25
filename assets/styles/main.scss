@@ -1,3 +1,4 @@
+@import "bourbon/bourbon";
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -15,5 +16,6 @@
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/front";
 @import "layouts/posts";
 @import "layouts/tinymce";
