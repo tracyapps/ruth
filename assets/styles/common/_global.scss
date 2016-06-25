@@ -13,3 +13,29 @@ h6 {
 	font-family: $font-title;
 	font-weight: normal;
 }
+
+
+.blue {
+	background: $blue;
+	color: $white;
+}
+
+.teal {
+	background: $teal;
+	color: $white;
+}
+
+.green {
+	background: $green;
+	color: $dark-grey;
+}
+
+.yellow {
+	background: $yellow;
+	color: $darker-grey;
+}
+
+.grey {
+	background: $light-grey;
+	color: $darker-grey;
+}

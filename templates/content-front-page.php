@@ -9,9 +9,20 @@ if( have_rows('additional_page_content') ):
 
 	// loop through the rows of data
 	while ( have_rows('additional_page_content') ) : the_row();
-
-		echo '<div class="flexbox-row">
-				<div class="container">';
+		if ( get_sub_field( 'page_content_background_select' ) == 'color' ) {
+			printf(
+				'<div class="flexbox-row %s">
+				<div class="container">',
+				get_sub_field( 'page_content_background_color' )
+			);
+		} else {
+			printf(
+				'<div class="flexbox-row has-image %s" style="background-image: url(%s)">
+				<div class="container">',
+				get_sub_field( 'light_or_dark_text' ),
+				get_sub_field( 'page_content_background_image' )
+			);
+		}
 
 		// check if the embedded repeater field has rows of data
 		if( have_rows('page_content_row') ):
@@ -21,7 +32,7 @@ if( have_rows('additional_page_content') ):
 
 				printf(
 					'<div class="column">%s</div>',
-					wp_kses_post( the_sub_field('page_content_column') )
+					wp_kses_post( get_sub_field('page_content_column') )
 				);
 
 			endwhile;

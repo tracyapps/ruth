@@ -19,11 +19,26 @@
 }
 
 .flexbox-row {
+	padding: 4em 0;
+
 	> .container {
 		@include display(flex);
 
 		.column {
 			@include flex(1);
+		}
+	}
+
+	&.has-image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+
+		&.dark {
+			color: $darker-grey;
+		}
+		&.light {
+			color: $white;
 		}
 	}
 }
